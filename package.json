@@ -1,0 +1,35 @@
+{
+  "name": "@nolajs/eslint-config",
+  "version": "1.0.0",
+  "description": "Eslint Config Preset for NolaJS",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --fix"
+  },
+  "keywords": [
+    "eslint-preset"
+  ],
+  "author": {
+    "name": "Steven Scaffidi",
+    "email": "sscaff1@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:NolaJS/eslint-config.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "eslint-plugin-sort-destructure-keys": "^1.3.3",
+    "eslint-plugin-sort-keys-fix": "^1.1.0",
+    "prettier": "^1.19.1"
+  }
+}
