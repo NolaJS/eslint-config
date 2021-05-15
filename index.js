@@ -14,12 +14,11 @@ module.exports = {
   parserOptions: {
     requireConfigFile: false,
   },
-  plugins: ['prettier', 'react-hooks', 'sort-destructure-keys', 'sort-keys-fix'],
+  plugins: ['prettier', 'sort-destructure-keys', 'sort-keys-fix'],
   rules: {
     'arrow-parens': 'off',
     'func-names': ['warn', 'as-needed'],
     'func-style': 'off',
-
     'prettier/prettier': [
       'error',
       {
@@ -28,8 +27,6 @@ module.exports = {
         trailingComma: 'all',
       },
     ],
-    'react-hooks/exhaustive-deps': 'warn',
-    'react-hooks/rules-of-hooks': 'error',
     'sort-destructure-keys/sort-destructure-keys': 2,
     'sort-keys-fix/sort-keys-fix': 2,
   },
