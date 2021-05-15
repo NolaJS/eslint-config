@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['airbnb', 'prettier', 'prettier/react'],
+  extends: ['airbnb', 'prettier'],
   overrides: [
     {
       env: { jest: true },
@@ -10,7 +10,10 @@ module.exports = {
       },
     },
   ],
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
+  parserOptions: {
+    requireConfigFile: false,
+  },
   plugins: ['prettier', 'react-hooks', 'sort-destructure-keys', 'sort-keys-fix'],
   rules: {
     'arrow-parens': 'off',
