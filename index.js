@@ -9,11 +9,43 @@ module.exports = {
         'react/prop-types': 'off',
       },
     },
+    {
+      extends: ['plugin:@typescript-eslint/recommended'],
+      files: ['**/*.ts?(x)', '**/*.d.ts?(x)'],
+      parser: '@typescript-eslint/parser',
+      plugins: ['@typescript-eslint'],
+      rules: {
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
+        '@typescript-eslint/no-shadow': ['error'],
+        '@typescript-eslint/no-unused-vars': ['error'],
+        '@typescript-eslint/no-use-before-define': ['error'],
+        'import/extensions': [
+          'error',
+          'ignorePackages',
+          {
+            '.d.ts': 'never',
+            js: 'never',
+            jsx: 'never',
+            ts: 'never',
+            tsx: 'never',
+          },
+        ],
+        'no-shadow': 'off',
+        // per https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/FAQ.md#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
+        'no-undef': 'off',
+        'no-unused-vars': 'off',
+        'no-use-before-define': 'off',
+        'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.tsx'] }],
+      },
+      settings: {
+        'import/resolver': {
+          node: {
+            extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts'],
+          },
+        },
+      },
+    },
   ],
-  parser: '@babel/eslint-parser',
-  parserOptions: {
-    requireConfigFile: false,
-  },
   plugins: ['prettier', 'sort-destructure-keys', 'sort-keys-fix'],
   rules: {
     'arrow-parens': 'off',
