@@ -46,7 +46,6 @@ module.exports = {
   ],
   plugins: ['prettier', 'sort-destructure-keys', 'sort-keys-fix'],
   rules: {
-    'arrow-parens': 'off',
     'func-names': ['warn', 'as-needed'],
     'func-style': 'off',
     'prettier/prettier': [
