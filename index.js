@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['airbnb', 'prettier'],
+  extends: ['airbnb', 'prettier', 'plugin:react-hooks/recommended'],
   overrides: [
     {
       env: { jest: true },
@@ -10,7 +10,7 @@ module.exports = {
       },
     },
     {
-      extends: ['plugin:@typescript-eslint/recommended'],
+      extends: ['plugin:@typescript-eslint/recommended', 'plugin:import/typescript'],
       files: ['**/*.ts?(x)', '**/*.d.ts?(x)'],
       parser: '@typescript-eslint/parser',
       plugins: ['@typescript-eslint'],
@@ -39,9 +39,7 @@ module.exports = {
       },
       settings: {
         'import/resolver': {
-          node: {
-            extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts'],
-          },
+          typescript: {},
         },
       },
     },
@@ -61,5 +59,12 @@ module.exports = {
     ],
     'sort-destructure-keys/sort-destructure-keys': 2,
     'sort-keys-fix/sort-keys-fix': 2,
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx'],
+      },
+    },
   },
 };
