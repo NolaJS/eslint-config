@@ -18,6 +18,9 @@
     "url": "git@github.com:NolaJS/eslint-config.git"
   },
   "license": "ISC",
+  "peerDependencies": {
+    "typescript": ">=5"
+  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^6.19.0",
     "@typescript-eslint/parser": "^6.19.0",
@@ -32,7 +35,9 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-sort-destructure-keys": "^1.5.0",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
-    "prettier": "^3.2.4",
+    "prettier": "^3.2.4"
+  },
+  "devDependencies": {
     "typescript": "^5.3.3"
   }
 }
